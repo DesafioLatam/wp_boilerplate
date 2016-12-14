@@ -6,7 +6,7 @@
 		wp_deregister_script( 'jquery-migrate' );
 
 		/* Register Scripts */
-		wp_register_script('custom_jQuery', get_template_directory_uri() . '/assets/js/lib/jquery-3.1.0.min.js', null, null, true);
+		wp_register_script('custom_jQuery', get_template_directory_uri() . '/assets/js/lib/jquery-3.1.1.min.js', null, null, true);
 		wp_register_script('mainJS', get_template_directory_uri() . '/assets/js/functions.js', 'custom_jQuery', null, true);
 		
 		/* Enqueue Scripts */
