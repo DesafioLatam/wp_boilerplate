@@ -1,0 +1,9 @@
+<?php 
+	
+	function enqueue_style() {
+		wp_register_style('mainStyle', get_template_directory_uri() . '/assets/css/style.css', null, null, null);
+		wp_enqueue_style('mainStyle');
+	}
+
+	add_action( 'wp_enqueue_scripts', 'enqueue_style' );
+?>
