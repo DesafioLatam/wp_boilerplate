@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="<?php bloginfo('language') ?>">
-<head>
-	<meta charset="<?php bloginfo('charset') ?>">
-	<meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0" />
-	<title></title>
-	<?php wp_head() ?>
-</head>
-<body>
-	
-<?php wp_footer() ?>
-</body>
-</html>
+<?php get_header() ?>
+
+<h1>Body de la página de inicio</h1>
+
+<?php get_footer() ?>
