@@ -5,17 +5,9 @@ body.login div#login h1 {
   width: 100%;
 }
 body.login div#login h1 a {
-  background: url(../images/login/logo.png) no-repeat;
-  background-size: 320px 87px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
-  height: 87px;
-  margin: 0 auto;
-  width: 320px;
-}
-/* <!---------- Retina Display ----------> */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  body.login div#login h1 a {
-    background: url(../images/login/logo@2x.png) no-repeat;
-    background-size: 320px 87px;
-  }
+  background: url(../images/login/logo.svg) no-repeat center center / auto 100% transparent;
+  height: 125px;
+  margin: 0 auto 50px;
+  outline: none;
+  width: 100%;
 }
