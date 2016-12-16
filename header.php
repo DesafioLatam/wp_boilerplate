@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<?php bloginfo('language') ?>" dir="<?php bloginfo('text_direction') ?>">
+<html lang="<?php bloginfo('language') ?>" dir="ltr">
 <head>
 	<meta charset="<?php bloginfo('charset') ?>">
 	<meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0" />
