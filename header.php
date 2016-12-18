@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="<?php bloginfo('language') ?>" dir="ltr">
+<html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo('charset') ?>">
-	<meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0" />
-	<title><?php bloginfo('name') ?></title>
-	<?php wp_head() ?>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php get_template_part('_includes/iOS', 'icons') ?>
+
+	<?php wp_head() ?>
 </head>
 <body>
 
