@@ -9,4 +9,6 @@
 </head>
 <body>
 
-<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+<?php if ( has_nav_menu( 'header-menu' ) ) { ?>
+	<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container_class' => 'header_menu' ) ); ?>
+<?php } ?>
