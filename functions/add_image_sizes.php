@@ -3,6 +3,7 @@
 	// Agrega tamaños de imágenes personalizadas en posts
 	if ( function_exists( 'add_theme_support' ) ) { 
 		add_image_size( 'slideshow', 800, 600, true);
+		add_image_size( 'custom_logo', 800, 600, true);
 
 		add_filter('image_size_names_choose', 'my_image_sizes');
 	}

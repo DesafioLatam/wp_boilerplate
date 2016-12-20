@@ -7,6 +7,10 @@
 		add_theme_support( 'customize-selective-refresh-widgets' );
 		add_theme_support( 'woocommerce' );
 		add_theme_support( 'automatic-feed-links' );
+		
+		add_theme_support( 'custom-logo', array(
+			'size' => 'custom_logo'
+		));
 
 		register_nav_menus( array(
 			'header-menu'  => __( 'Header Menu' ),
