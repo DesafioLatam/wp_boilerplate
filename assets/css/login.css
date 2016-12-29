@@ -1,6 +1,9 @@
 html {
   background-color: white;
 }
+body.login {
+  background-color: #61B94C;
+}
 body.login div#login h1 {
   width: 100%;
 }
@@ -10,4 +13,12 @@ body.login div#login h1 a {
   margin: 0 auto 50px;
   outline: none;
   width: 100%;
+}
+body.login div#login #nav a,
+body.login div#login #backtoblog a {
+  color: #fff;
+}
+body.login div#login #nav a:hover,
+body.login div#login #backtoblog a:hover {
+  color: #316026;
 }
