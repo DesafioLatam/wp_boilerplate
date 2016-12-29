@@ -1,8 +1,6 @@
-html {
-  background-color: white;
-}
+/* Colors */
 body.login {
-  background-color: #61B94C;
+  background: linear-gradient(to bottom, #438534 0%, #61B94C 100%);
 }
 body.login div#login h1 {
   width: 100%;
@@ -13,6 +11,10 @@ body.login div#login h1 a {
   margin: 0 auto 50px;
   outline: none;
   width: 100%;
+}
+body.login div#login #loginform #user_pass,
+body.login div#login #loginform #user_login {
+  color: #61B94C;
 }
 body.login div#login #nav a,
 body.login div#login #backtoblog a {
