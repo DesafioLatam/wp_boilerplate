@@ -1,5 +1,5 @@
 <?php 
-	function disable_embeds_init() {
+	function dl_disable_embeds_init() {
 
 	    // Remove oEmbed-specific JavaScript from the front-end and back-end.
 	    remove_action('wp_head', 'wp_oembed_add_host_js');
@@ -12,5 +12,5 @@
 		remove_action( 'wp_head', 'wp_resource_hints', 2 );
 	}
 
-	add_action('init', 'disable_embeds_init');
+	add_action('init', 'dl_disable_embeds_init');
 ?>

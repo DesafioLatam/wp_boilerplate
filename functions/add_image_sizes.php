@@ -5,11 +5,11 @@
 		add_image_size( 'slideshow', 800, 600, true);
 		add_image_size( 'custom_logo', 800, 600, true);
 
-		add_filter('image_size_names_choose', 'my_image_sizes');
+		add_filter('image_size_names_choose', 'dl_image_sizes');
 	}
 	
 	// Agrega los tamaños personalizados en la lista de tamaños disponibles en el administrador
-	function my_image_sizes($sizes) {
+	function dl_image_sizes($sizes) {
 	    $addsizes = array(
 	        "slideshow" => __( "Tamaño slideshow")
 	    );

@@ -1,5 +1,5 @@
 <?php
-  function remove_menus(){
+  function dl_remove_menus(){
     
     remove_menu_page( 'index.php' );                  //Dashboard
     remove_menu_page( 'edit.php' );                   //Posts
@@ -14,5 +14,5 @@
     
   }
 
-  //add_action( 'admin_menu', 'remove_menus' );
+  //add_action( 'admin_menu', 'dl_remove_menus' );
 ?>

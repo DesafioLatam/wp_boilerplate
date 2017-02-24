@@ -1,6 +1,6 @@
 <?php 
 	
-	function enqueue_scripts() {
+	function dl_enqueue_scripts() {
 		/* Deregister Scripts */
 		wp_deregister_script( 'jquery' );
 		wp_deregister_script( 'jquery-migrate' );
@@ -20,5 +20,5 @@
 		wp_enqueue_script('mainJS');
 	}
 
-	add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
+	add_action( 'wp_enqueue_scripts', 'dl_enqueue_scripts' );
 ?>

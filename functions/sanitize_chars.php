@@ -1,6 +1,6 @@
 <?php 
 
-	function sanitize_chars($filename) {
+	function dl_sanitize_chars($filename) {
 		$original_chars = array(
 					'/А/','/Б/','/В/','/Г/', // cyrillic alphabet
 					'/Д/','/Е/','/Ж/','/З/','/И/',
@@ -63,6 +63,6 @@
 		return $friendly_filename;
 	}
 
-	add_filter('sanitize_file_name', 'sanitize_chars', 10);
+	add_filter('sanitize_file_name', 'dl_sanitize_chars', 10);
 
 ?>

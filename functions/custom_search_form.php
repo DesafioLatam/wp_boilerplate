@@ -1,6 +1,6 @@
 <?php
 	
-	function custom_search_form() {
+	function dl_custom_search_form() {
 		$form = '<div class="search">';
 		$form .= '<form role="search" method="get" class="search-form" action="';
 		$form .= get_bloginfo('url');
@@ -15,6 +15,6 @@
 		echo $form;
 	}
 
-	//add_filter( 'get_search_form', 'custom_search_form' );
+	//add_filter( 'get_search_form', 'dl_custom_search_form' );
 
 ?>
