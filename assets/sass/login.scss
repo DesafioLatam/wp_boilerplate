@@ -1,0 +1,37 @@
+@import "lib/variables.scss";
+
+body.login {
+	background: linear-gradient(to bottom, darken($green, 15%) 0%,$green 100%);
+
+	div#login {
+
+		h1 {
+			width: 100%;
+
+			a {
+				background: url(../images/login/logo.svg) no-repeat center center / auto 100% transparent;
+				height: 125px;
+				margin: 0 auto 50px;
+				outline: none;
+				width: 100%;
+			}
+		}
+
+		#loginform {
+
+			#user_pass,
+			#user_login {
+				color: $green;
+			}
+		}
+
+		#nav a,
+		#backtoblog a {
+			color: #fff;
+
+			&:hover {
+				color: darken($green, 25%);
+			}
+		}
+	}
+}
