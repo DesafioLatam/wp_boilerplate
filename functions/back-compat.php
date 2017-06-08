@@ -11,7 +11,7 @@
 
 
 	function dl_upgrade_notice() {
-		$message = sprintf( __( 'Este theme requiere al menos Wordpress versión 4.7. El sitio esta funcionando sobre la versión %s. Por favor, actualiza y prueba nuevamente.' ), $GLOBALS['wp_version'] );
+		$message = sprintf( __( "Este theme requiere al menos Wordpress versión %s. El sitio esta funcionando sobre la versión %s. Por favor, actualiza la versión y prueba nuevamente activando este theme." ), $GLOBALS['wp_min_version'], $GLOBALS['wp_version'] );
 		printf( '<div class="error"><p>%s</p></div>', $message );
 	}
 
@@ -19,7 +19,7 @@
 
 	function dl_preview() {
 		if ( isset( $_GET['preview'] ) ) {
-			wp_die( sprintf( __( 'Este theme requiere al menos Wordpress versión 4.7. El sitio esta funcionando sobre la versión %s. Por favor, actualiza y prueba nuevamente.' ), $GLOBALS['wp_version'] ) );
+			wp_die( sprintf( __( "Este theme requiere al menos Wordpress versión %s. El sitio esta funcionando sobre la versión %s. Por favor, actualiza la versión y prueba nuevamente activando este theme." ), $GLOBALS['wp_min_version'], $GLOBALS['wp_version'] ) );
 		}
 	}
 
