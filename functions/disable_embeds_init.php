@@ -10,6 +10,15 @@
 
 		// Remove DNS prefetch 
 		remove_action( 'wp_head', 'wp_resource_hints', 2 );
+
+		// Wordpress version
+		remove_action('wp_head', 'wp_generator');
+
+		// Remove RSD link
+		remove_action('wp_head', 'rsd_link');
+
+		//Remove wlwmanifest Link
+		remove_action('wp_head', 'wlwmanifest_link');
 	}
 
 	add_action('init', 'dl_disable_embeds_init');
