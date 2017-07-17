@@ -1,10 +1,13 @@
 <?php 
 	
 	function dl_enqueue_style() {
-		wp_register_style('reset', get_theme_file_uri() . '/assets/css/reset.css', null, null, null);
-		wp_register_style('mainStyle', get_theme_file_uri() . '/assets/css/style.css', null, null, null);
+		$theme_data = wp_get_theme();
+
+		/* Register Scripts */
+		wp_register_style('reset', get_theme_file_uri() . '/assets/css/reset.css', null, $theme_data->get( 'Version' ), 'screen');
+		wp_register_style('mainStyle', get_theme_file_uri() . '/assets/css/style.css', array('reset'), $theme_data->get( 'Version' ), 'screen');
 		
-		wp_enqueue_style('reset');
+		/* Enqueue Scripts */
 		wp_enqueue_style('mainStyle');
 	}
 
