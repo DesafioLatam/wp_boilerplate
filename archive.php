@@ -1,8 +1,8 @@
 <?php get_header() ?>
 
 	<?php if (have_posts()) { ?>
-	<ul>
 
+	<ul>
 		<?php while ( have_posts() ) { the_post(); ?>
 		<li>
 			<a href="<?php the_permalink() ?>">
@@ -13,9 +13,11 @@
 			</a>
 		</li>
 		<?php }; ?>
-
 	</ul>
-	<?php }; wp_reset_query(); ?>
+
+	<?php } else { ?>
+		<!-- Content -->
+	<?php } wp_reset_query(); ?>
 
 	<?php get_sidebar() ?>
 <?php get_footer() ?>
