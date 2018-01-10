@@ -36,6 +36,9 @@ if ( ! class_exists( 'Page_Navigation' ) ) :
 			// Include handling files
 			include_once( '_inc/pagination_funcs.php' );
 
+			// Handle when plugin is active
+			add_action('after_switch_theme', array( $this, 'active_plugin') );
+
 			// register admin options
 			add_action( 'admin_init', array( $this, 'admin_options' ) );
 
@@ -121,7 +124,7 @@ if ( ! class_exists( 'Page_Navigation' ) ) :
 		}
 
 		/**
-		 * Add options page of plugin
+		 * Add options page
 		 *
 		 * @access public
 		 * @return void
@@ -139,7 +142,7 @@ if ( ! class_exists( 'Page_Navigation' ) ) :
 		}
 
 		/**
-		 * Render the Plugin options form
+		 * Render the options form
 		 *
 		 * @access public
 		 * @return void
