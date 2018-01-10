@@ -1,0 +1,50 @@
+/**
+ * Main style for back-end of Pagination
+ *
+ * @author Kang
+ * @since 1.0
+ */
+
+/*------- Tab ---------*/
+.pag-tabs a,
+.pag-tabs a:active,
+.pag-tabs a:focus {
+	outline: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}
+
+.pag-tabs-content {
+	margin: 20px 0 0;
+}
+
+.pag-tabs-content > div {
+	display: none;
+}
+
+.pag-tabs-content > div:first-child {
+	display: block;
+}
+
+/*------- Settings field ---------*/
+.pag-settings-field {
+	display: inline-block;
+	width: 100%;
+	vertical-align: top;
+	margin-bottom: 30px;
+}
+
+.pag-settings-label,
+.pag-settings-input {
+	display: inline-block;
+}
+
+.pag-settings-label label {
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1.3;
+	color: #222;
+	min-width: 220px;
+}

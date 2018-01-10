@@ -1,0 +1,444 @@
+@import "variables.scss";
+
+.pagination {
+	clear: both;
+	margin: 10px 0 0;
+	display: inline-block;
+	width: 100%;
+	text-align: left;
+	a {
+		display: inline-block;
+		padding: 5px 8px;
+		line-height: 1;
+		border: 1px solid #676767;
+		transition: all .2s;
+		-webkit-transition: all .2s;
+		-moz-transition: all .2s;
+		color: $pag_1;
+		background: #fff;
+		text-decoration: none;
+		&:hover {
+			background: #676767;
+			color: $pag_2;
+		}
+	}
+	span {
+		display: inline-block;
+		padding: 5px 8px;
+		line-height: 1;
+		border: 1px solid #676767;
+		transition: all .2s;
+		-webkit-transition: all .2s;
+		-moz-transition: all .2s;
+		color: $pag_1;
+		background: #fff;
+		text-decoration: none;
+	}
+	span.current {
+		background: #676767;
+		color: $pag_2;
+	}
+}
+.pagination.align-center {
+	text-align: center;
+}
+.pagination.align-right {
+	text-align: right;
+}
+ul.page-nav {
+	list-style: none !important;
+	display: inline-block;
+	vertical-align: top;
+	li {
+		display: inline-block;
+		float: left;
+		margin: 0 3px 0 0;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+.pagination.style-circle {
+	a {
+		padding: 0;
+		width: 28px;
+		height: 28px;
+		line-height: 26px;
+		border-radius: 50%;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		text-align: center;
+	}
+	span {
+		padding: 0;
+		width: 28px;
+		height: 28px;
+		line-height: 26px;
+		border-radius: 50%;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		text-align: center;
+	}
+	a.next {
+		width: auto;
+		border-radius: 0;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border: none;
+		padding: 0 8px;
+		background: none;
+		color: $pag_1;
+		&:hover {
+			color: $pag_3;
+		}
+	}
+	a.prev {
+		width: auto;
+		border-radius: 0;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border: none;
+		padding: 0 8px;
+		background: none;
+		color: $pag_1;
+		&:hover {
+			color: $pag_3;
+		}
+	}
+	a.first-page-link {
+		width: auto;
+		border-radius: 0;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border: none;
+		padding: 0 8px;
+		background: none;
+		color: $pag_1;
+		&:hover {
+			color: $pag_3;
+		}
+	}
+	a.last-page-link {
+		width: auto;
+		border-radius: 0;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border: none;
+		padding: 0 8px;
+		background: none;
+		color: $pag_1;
+		&:hover {
+			color: $pag_3;
+		}
+	}
+}
+.pagination.style-square {
+	a {
+		padding: 0;
+		width: 28px;
+		height: 28px;
+		line-height: 26px;
+		text-align: center;
+	}
+	span {
+		padding: 0;
+		width: 28px;
+		height: 28px;
+		line-height: 26px;
+		text-align: center;
+	}
+	a.next {
+		width: auto;
+		border: none;
+		padding: 0 8px;
+		background: none;
+		color: $pag_1;
+		&:hover {
+			color: $pag_3;
+		}
+	}
+	a.prev {
+		width: auto;
+		border: none;
+		padding: 0 8px;
+		background: none;
+		color: $pag_1;
+		&:hover {
+			color: $pag_3;
+		}
+	}
+	a.first-page-link {
+		width: auto;
+		border: none;
+		padding: 0 8px;
+		background: none;
+		color: $pag_1;
+		&:hover {
+			color: $pag_3;
+		}
+	}
+	a.last-page-link {
+		width: auto;
+		border: none;
+		padding: 0 8px;
+		background: none;
+		color: $pag_1;
+		&:hover {
+			color: $pag_3;
+		}
+	}
+}
+.pagination.style-diamond-square {
+	ul.page-nav {
+		li {
+			margin: 7px;
+		}
+	}
+	ul {
+		>li {
+			>a {
+				padding: 0;
+				width: 28px;
+				height: 28px;
+				line-height: 26px;
+				text-align: center;
+				transform: rotate(-45deg);
+				-webkit-transform: rotate(-45deg);
+				-moz-transform: rotate(-45deg);
+				-o-transform: rotate(-45deg);
+				-ms-transform: rotate(-45deg);
+				&:hover {
+					span {
+						color: $pag_2;
+					}
+				}
+			}
+			>span {
+				padding: 0;
+				width: 28px;
+				height: 28px;
+				line-height: 26px;
+				text-align: center;
+				transform: rotate(-45deg);
+				-webkit-transform: rotate(-45deg);
+				-moz-transform: rotate(-45deg);
+				-o-transform: rotate(-45deg);
+				-ms-transform: rotate(-45deg);
+				&:hover {
+					span {
+						color: $pag_2;
+					}
+				}
+			}
+			>span.dots {
+				position: relative;
+				border: none;
+				transform: none;
+				-webkit-transform: none;
+				-moz-transform: none;
+				-o-transform: none;
+				-ms-transform: none;
+				&:before {
+					width: 28px;
+					height: 28px;
+					position: absolute;
+					top: 0;
+					left: 0;
+					display: inline-block;
+					border: 1px solid #676767;
+					content: "";
+					-webkit-transform: rotate(-45deg);
+					-moz-transform: rotate(45deg);
+					-o-transform: rotate(45deg);
+					-ms-transform: rotate(45deg);
+					transform: rotate(45deg);
+				}
+			}
+		}
+	}
+	a {
+		>span {
+			transform: rotate(45deg);
+			-webkit-transform: rotate(45deg);
+			-moz-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			border: none;
+			background: none;
+		}
+	}
+	span {
+		>span {
+			transform: rotate(45deg);
+			-webkit-transform: rotate(45deg);
+			-moz-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			border: none;
+			background: none;
+		}
+	}
+	span.current {
+		>span {
+			color: $pag_2;
+		}
+	}
+	a.next {
+		width: auto;
+		border: none;
+		padding: 0 3px;
+		background: none;
+		color: $pag_1;
+		transform: none;
+		-webkit-transform: none;
+		-moz-transform: none;
+		&:hover {
+			color: $pag_3;
+		}
+	}
+	a.prev {
+		width: auto;
+		border: none;
+		padding: 0 3px;
+		background: none;
+		color: $pag_1;
+		transform: none;
+		-webkit-transform: none;
+		-moz-transform: none;
+		&:hover {
+			color: $pag_3;
+		}
+	}
+	a.first-page-link {
+		width: auto;
+		border: none;
+		padding: 0 3px;
+		background: none;
+		color: $pag_1;
+		transform: none;
+		-webkit-transform: none;
+		-moz-transform: none;
+		&:hover {
+			color: $pag_3;
+		}
+	}
+	a.last-page-link {
+		width: auto;
+		border: none;
+		padding: 0 3px;
+		background: none;
+		color: $pag_1;
+		transform: none;
+		-webkit-transform: none;
+		-moz-transform: none;
+		&:hover {
+			color: $pag_3;
+		}
+	}
+}
+@media screen and (max-width: 767px) and (min-width: 480px) {
+	.pagination.style-diamond-square {
+		ul {
+			>li {
+				>a {
+					width: 24px;
+					height: 24px;
+					line-height: 22px;
+				}
+				>span {
+					width: 24px;
+					height: 24px;
+					line-height: 22px;
+				}
+			}
+		}
+		a {
+			>span {
+				margin-top: -1px;
+			}
+		}
+		span {
+			>span {
+				margin-top: -1px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 479px) {
+	ul.page-nav {
+		li {
+			margin: 0 2px 0 0;
+		}
+	}
+	.pagination {
+		a {
+			padding: 4px 6px 5px;
+		}
+		span {
+			padding: 4px 6px 5px;
+		}
+		a.prev {
+			display: none;
+		}
+		a.next {
+			display: none;
+		}
+	}
+	.pagination.style-circle {
+		a {
+			width: 24px;
+			height: 24px;
+			line-height: 22px;
+		}
+		span {
+			width: 24px;
+			height: 24px;
+			line-height: 22px;
+		}
+	}
+	.pagination.style-square {
+		a {
+			width: 24px;
+			height: 24px;
+			line-height: 22px;
+		}
+		span {
+			width: 24px;
+			height: 24px;
+			line-height: 22px;
+		}
+	}
+	.pagination.style-diamond-square {
+		ul.page-nav {
+			li {
+				margin: 5px;
+			}
+			li.first-page {
+				display: none;
+			}
+			li.last-page {
+				display: none;
+			}
+		}
+		ul {
+			>li {
+				>a {
+					width: 24px;
+					height: 24px;
+					line-height: 22px;
+				}
+				>span {
+					width: 24px;
+					height: 24px;
+					line-height: 22px;
+				}
+			}
+		}
+		a.prev {
+			display: inline-block;
+		}
+		a.next {
+			display: inline-block;
+		}
+	}
+}
