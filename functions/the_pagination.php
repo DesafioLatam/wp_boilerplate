@@ -30,7 +30,7 @@ if ( ! class_exists( 'Page_Navigation' ) ) :
 		 *
 		 * @access public
 		 * @return Page_Navigation
-		 * @since  1.0
+		 * @since  1.1
 		 */
 		public function __construct() {
 			// Include handling files
@@ -56,7 +56,7 @@ if ( ! class_exists( 'Page_Navigation' ) ) :
 		 *
 		 * @access public
 		 * @return void
-		 * @since  1.0
+		 * @since  1.1
 		 */
 		public function active_plugin() {
 			$defaults = array(
@@ -75,7 +75,7 @@ if ( ! class_exists( 'Page_Navigation' ) ) :
 		 *
 		 * @access public
 		 * @return void
-		 * @since  1.0
+		 * @since  1.1
 		 */
 		public function admin_options() {
 			register_setting( DLP_ST, DLP_ST, array( $this, 'validate_options' ) );
@@ -89,7 +89,7 @@ if ( ! class_exists( 'Page_Navigation' ) ) :
 		 * @param  array $input
 		 *
 		 * @return array
-		 * @since  1.0
+		 * @since  1.1
 		 */
 		public function validate_options( $input ) {
 
@@ -128,7 +128,7 @@ if ( ! class_exists( 'Page_Navigation' ) ) :
 		 *
 		 * @access public
 		 * @return void
-		 * @since  1.0
+		 * @since  1.1
 		 */
 		public function add_options_page() {
 			add_submenu_page( 
@@ -146,7 +146,7 @@ if ( ! class_exists( 'Page_Navigation' ) ) :
 		 *
 		 * @access public
 		 * @return void
-		 * @since  1.0
+		 * @since  1.1
 		 */
 		public function plugin_form() {
 			include( '_inc/pagination_form.php' );
@@ -157,10 +157,10 @@ if ( ! class_exists( 'Page_Navigation' ) ) :
 		 *
 		 * @access public
 		 * @return void
-		 * @since  1.0
+		 * @since  1.1
 		 */
 		public function admin_enqueue() {
-			wp_enqueue_style( 'dl-page-nav-admin', get_parent_theme_file_uri('/assets/css/admin.css'), false, self::$version );
+			wp_enqueue_style( 'dl-page-nav-admin', get_parent_theme_file_uri('/assets/css/admin.css'), null, self::$version );
 			wp_enqueue_script( 'dl-page-nav', get_parent_theme_file_uri('/assets/js/lib/admin.js'), array( 'jquery' ), self::$version, true );
 		}
 
@@ -170,7 +170,7 @@ if ( ! class_exists( 'Page_Navigation' ) ) :
 		 *
 		 * @access public
 		 * @return array
-		 * @since  1.0
+		 * @since  1.1
 		 */
 		public static function get_all_taxonomies() {
 			$args = array(
