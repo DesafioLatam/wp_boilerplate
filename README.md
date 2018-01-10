@@ -11,8 +11,7 @@ Para utilizar la paginación debemos llamar a la función `the_pagination()`. Y 
 ~~~html
 <?php
 	$arg = array(
-		'post_type'		 => 'posts',
-		'posts_per_page' => 2,
+		'post_type'		 => 'custom_post_name',
 		'paged'			 => $paged
 	);
 	
