@@ -5,4 +5,4 @@
 <link href="<?php bloginfo('template_url') ?>/assets/ico/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" />
 <link href="<?php bloginfo('template_url') ?>/assets/ico/icon-hires.png" rel="icon" sizes="192x192" />
 <link href="<?php bloginfo('template_url') ?>/assets/ico/icon-normal.png" rel="icon" sizes="128x128" />
-<link rel="mask-icon" sizes="any" href="<?php bloginfo('template_url') ?>/assets/ico/icon.svg" color="#61b94c">
+<link href="<?php bloginfo('template_url') ?>/assets/ico/icon.svg" rel="mask-icon" sizes="any" color="#61b94c">
