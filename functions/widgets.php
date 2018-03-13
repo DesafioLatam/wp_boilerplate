@@ -1,6 +1,6 @@
 <?php
 
-	function dl_contact_widget_init() {
+	function dl_widget_init() {
 		register_sidebar( array(
 			'name'          => 'Página de Contacto',
 			'id'            => 'contact_widget',
