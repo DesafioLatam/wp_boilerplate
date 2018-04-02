@@ -5,8 +5,14 @@
 		add_theme_support( 'title-tag' );
 		add_theme_support( 'post-thumbnails' );
 		add_theme_support( 'customize-selective-refresh-widgets' );
-		add_theme_support( 'woocommerce' );
 		add_theme_support( 'automatic-feed-links' );
+
+		/* Woocommerce */
+		add_theme_support( 'woocommerce' );
+		add_theme_support( 'wc-product-gallery-zoom' );
+		add_theme_support( 'wc-product-gallery-lightbox' );
+		add_theme_support( 'wc-product-gallery-slider' );
+		
 		
 		add_theme_support( 'custom-logo', array(
 			'size' => 'custom_logo'
