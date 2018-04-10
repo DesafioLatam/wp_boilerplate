@@ -1,0 +1,2 @@
+Esta es una carpeta para almacenar todas las funciones relacionadas con Woocommerce y, de esa forma, mantener separadas las funciones de la plantilla de las de Woocommerce.
+El objetivo es que mientras más ordenado se encuentre todo, más fácil será después retomar el proyecto luego de un largo tiempo.
