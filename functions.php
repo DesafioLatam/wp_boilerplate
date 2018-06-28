@@ -1,9 +1,13 @@
 <?php 
 
-	$theme_functions = glob(get_template_directory() . '/functions/*.php');
-	$wc_functions    = glob(get_template_directory() . '/functions/woocommerce/*.php');
+	function optionsFilter($string) {
+		return strpos($string, '__options.php') === false;
+	}
 
-	$files = array_merge($theme_functions, $wc_functions);
+	require_once get_template_directory() . '/functions/__options.php';
+
+	$files = array_merge($GLOBALS["options"]["theme_functions"], $GLOBALS["options"]["wc_functions"]);
+	$files = array_filter($files, 'optionsFilter');
 
 	foreach($files as $file) {
 		if (basename($file, ".php") != 'back-compat') {
@@ -22,5 +26,3 @@
 		require get_template_directory() . '/functions/back-compat.php';
 		return;
 	}
-
-?>
