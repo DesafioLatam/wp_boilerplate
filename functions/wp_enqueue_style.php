@@ -1,6 +1,7 @@
 <?php 
 	
 	function dl_enqueue_style() {
+		global $theme_options;
 		$theme_data = wp_get_theme();
 
 		/* Register Scripts */
@@ -10,11 +11,11 @@
 		wp_register_style('mainStyle', get_parent_theme_file_uri('/assets/css/style.css'), array('reset'), $theme_data->get( 'Version' ), 'screen');
 		
 		/* Enqueue Scripts */
-		if ($GLOBALS["options"]["slider"]["flexslider"]) {
+		if ($theme_options["slider"]["flexslider"]) {
 			wp_enqueue_style('flexslider');
 		}
 
-		if ($GLOBALS["options"]["slider"]["flickity"]) {
+		if ($theme_options["slider"]["flickity"]) {
 			wp_enqueue_style('flickity');
 		}
 

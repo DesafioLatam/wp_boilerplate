@@ -1,6 +1,6 @@
 <?php 
 
-	$GLOBALS["options"] = array(
+	$theme_options = array(
 		"woocommerce_enabled" => class_exists( 'WooCommerce' ),
 		"functions"			  => array(
 			"theme"		      => glob(get_template_directory() . '/functions/*.php'),

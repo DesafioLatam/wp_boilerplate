@@ -6,7 +6,8 @@
 	*/
 
 	require_once get_template_directory() . '/functions/__get_files.php';
-	$files = get_files_from_folders( $GLOBALS["options"]["functions"] );
+	global $theme_options;
+	$files = get_files_from_folders( $theme_options["functions"] );
 
 	foreach($files as $file) {
 		require_once $file;

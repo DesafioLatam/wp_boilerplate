@@ -1,6 +1,7 @@
 <?php 
 	
 	function dl_enqueue_scripts() {
+		global $theme_options;
 		$theme_data = wp_get_theme();
 
 		/* Deregister Scripts */
@@ -9,7 +10,7 @@
 
 
 		/* Register Scripts */
-		if ($GLOBALS["options"]["woocommerce_enabled"] || $GLOBALS["options"]["slider"]["flexslider"] || $GLOBALS["options"]["slider"]["flickity"]) {
+		if ($theme_options["woocommerce_enabled"] || $theme_options["slider"]["flexslider"] || $theme_options["slider"]["flickity"]) {
 			wp_register_script('jquery', get_theme_file_uri('/assets/js/lib/jquery.min.js'), null, '3.3.1', true);
 			wp_register_script('jquery-migrate', get_theme_file_uri('/assets/js/lib/jquery-migrate.min.js'), array('jquery'), '3.0.0', true);
 		}
@@ -19,11 +20,11 @@
 
 
 		/* Enqueue Scripts */
-		if ($GLOBALS["options"]["slider"]["flexslider"]) {
+		if ($theme_options["slider"]["flexslider"]) {
 			wp_enqueue_script('flexslider');
 		}
 
-		if ($GLOBALS["options"]["slider"]["flickity"]) {
+		if ($theme_options["slider"]["flickity"]) {
 			wp_enqueue_script('flickity');
 		}
 
