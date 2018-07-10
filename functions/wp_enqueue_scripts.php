@@ -9,7 +9,7 @@
 
 
 		/* Register Scripts */
-		if ($GLOBALS["options"]["WooCommerceEnabled"] || $GLOBALS["options"]["slider"]["flexslider"] || $GLOBALS["options"]["slider"]["flickity"]) {
+		if ($GLOBALS["options"]["woocommerce_enabled"] || $GLOBALS["options"]["slider"]["flexslider"] || $GLOBALS["options"]["slider"]["flickity"]) {
 			wp_register_script('jquery', get_theme_file_uri('/assets/js/lib/jquery.min.js'), null, '3.3.1', true);
 			wp_register_script('jquery-migrate', get_theme_file_uri('/assets/js/lib/jquery-migrate.min.js'), array('jquery'), '3.0.0', true);
 		}
