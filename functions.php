@@ -1,18 +1,15 @@
 <?php 
 
-	function optionsFilter($string) {
-		return strpos($string, '__options.php') === false;
-	}
+	/**
+	 * This imports all the files inside the functions folder 
+	 * and adds them into functions file
+	*/
 
-	require_once get_template_directory() . '/functions/__options.php';
-
-	$files = array_merge($GLOBALS["options"]["theme_functions"], $GLOBALS["options"]["wc_functions"]);
-	$files = array_filter($files, 'optionsFilter');
+	require_once get_template_directory() . '/functions/__get_files.php';
+	$files = get_files_from_folders( $GLOBALS["options"]["functions"] );
 
 	foreach($files as $file) {
-		if (basename($file, ".php") != 'back-compat') {
-			require_once $file;
-		}
+		require_once $file;
 	}
 
 
