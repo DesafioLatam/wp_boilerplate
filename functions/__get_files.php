@@ -3,6 +3,8 @@
 	require_once get_template_directory() . '/functions/__options.php';
 	require_once get_template_directory() . '/functions/class.Filter.php';
 
+	$files_to_remove = array('__options.php', 'class.Filter.php', '__get_files.php', 'back-compat.php');
+
 	/**
 	 * Imports functions
 	 * Joins all files and filter unnecessary ones
@@ -13,17 +15,16 @@
 	 * @since  1.0
 	 */
 	function get_files_from_folders($arr) {
-
-		$all_files = array();
+		$files = array();
+		global $files_to_remove;
 
 		foreach ($arr as $key => $value) {
-			$all_files = array_merge($all_files, $arr[$key]);
+			$files = array_merge($files, $arr[$key]);
 		}
 
-		$files = array_filter($all_files, array(new Filter('__options.php'), 'file'));
-		$files = array_filter($files, array(new Filter('class.Filter.php'), 'file'));
-		$files = array_filter($files, array(new Filter('__get_files.php'), 'file'));
-		$files = array_filter($files, array(new Filter('back-compat.php'), 'file'));
+		foreach ($files_to_remove as &$value) {
+			$files = array_filter($files, array(new Filter($value), 'file'));
+		}
 
 		return $files;
 	}
