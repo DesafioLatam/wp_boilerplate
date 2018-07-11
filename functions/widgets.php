@@ -1,25 +1,32 @@
 <?php
 
-	function dl_widget_init() {
-		register_sidebar( array(
-			'name'          => 'Página de Contacto',
-			'id'            => 'contact_widget',
-			'before_widget' => '',
-			'after_widget'  => '',
-			'before_title'  => '',
-			'after_title'   => '',
-		));
-		
-		register_sidebar( array(
-			'name'          => 'Barra Lateral',
-			'id'            => 'sidebar_widget',
-			'before_widget' => '',
-			'after_widget'  => '',
-			'before_title'  => '',
-			'after_title'   => '',
-		));
-	}
+/**
+ * Widget Initialization
+ * Adds widget areas
+ *
+ * @since   1.0
+ * @see     https://codex.wordpress.org/Widgets_API
+ * @see     https://codex.wordpress.org/Function_Reference/register_sidebar
+ */
+function dl_widget_init() {
 
-	add_action( 'widgets_init', 'dl_widget_init' );
+	register_sidebar( array(
+		'name'			=> 'Página de Contacto',
+		'id'			=> 'contact_widget',
+		'before_widget'	=> '',
+		'after_widget'	=> '',
+		'before_title'	=> '',
+		'after_title'	=> '',
+	));
+	register_sidebar( array(
+		'name'			=> 'Barra Lateral',
+		'id'			=> 'sidebar_widget',
+		'before_widget'	=> '',
+		'after_widget'	=> '',
+		'before_title'	=> '',
+		'after_title'	=> '',
+	));
 
-?>
+}
+
+add_action( 'widgets_init', 'dl_widget_init' );

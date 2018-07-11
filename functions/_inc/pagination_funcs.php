@@ -83,8 +83,11 @@ if ( ! function_exists( 'get_pagination' ) ) {
  */
 
 if ( ! function_exists( 'the_pagination_set_posts_per_page' ) ) {
+
 	add_filter( 'pre_get_posts', 'the_pagination_set_posts_per_page' );
+
 	function the_pagination_set_posts_per_page( $query ) {
+
 		if ( is_admin() )
 			return;
 
@@ -98,22 +101,30 @@ if ( ! function_exists( 'the_pagination_set_posts_per_page' ) ) {
 		$taxonomies = get_taxonomies( $args );
 
 		if ( ! empty ( $taxonomies ) ) {
+
 			foreach ( $taxonomies as $key => $val ) {
+
 				if ( isset( $options[$key] ) && ! empty( $options[$key] ) && is_numeric( $options[$key] ) ) {
 					if ( $key == 'category' ) {
+
 						if ( is_category() && $query->is_main_query() )
 							$query->set( 'posts_per_page', $options[$key] );
-					}
-					elseif ( $key == 'post_tag' ) {
+
+					} elseif ( $key == 'post_tag' ) {
+
 						if ( is_tag() && $query->is_main_query() )
 							$query->set( 'posts_per_page', $options[$key] );
-					}
-					else {
+						
+					} else {
+
 						if ( is_tax( $key ) && $query->is_main_query() )
 							$query->set( 'posts_per_page', $options[$key] );
 					}
 				}
+
 			}
+
 		}
 	}
+
 }

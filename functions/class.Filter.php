@@ -2,8 +2,10 @@
 
 /**
  * Filter Class
- *
  * This class will filter certain elements from an array
+ *
+ * @return filter object
+ * @since  1.4.4
  */
 class Filter {
 	/**
@@ -15,10 +17,9 @@ class Filter {
 	 * Filter Constructor.
 	 *
 	 * @access public
-	 * @return Filter
-	 * @since  1.0
+	 * @param string $threshold The element to filter
 	 */
-	function __construct($threshold) {
+	public function __construct( $threshold ) {
 		$this->threshold = $threshold;
 	}
 
@@ -26,13 +27,9 @@ class Filter {
 	 * Filter elements from an array
 	 *
 	 * @access public
-	 *
-	 * @param string $i
-	 *
-	 * @return string
-	 * @since  1.0
+	 * @param string $i The current element on the loop
 	 */
-	public function file($i) {
-		return strpos($i, $this->threshold) === false ? $i : false;
+	public function file( $i ) {
+		return strpos( $i, $this->threshold ) === false ? $i : false;
 	}
 }

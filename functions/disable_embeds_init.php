@@ -1,25 +1,33 @@
-<?php 
-	function dl_disable_embeds_init() {
+<?php
 
-		// Remove oEmbed-specific JavaScript from the front-end and back-end.
-		remove_action('wp_head', 'wp_oembed_add_host_js');
+/**
+ * Hide Tags on Header
+ * Removes elements from header tag
+ *
+ * @return void
+ * @since  1.0
+ */
+function dl_disable_embeds_init() {
 
-		// Remove Emojis
-		remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-		remove_action( 'wp_print_styles', 'print_emoji_styles' );
+	// Remove oEmbed-specific JavaScript from the front-end and back-end.
+	remove_action( 'wp_head', 'wp_oembed_add_host_js' );
 
-		// Remove DNS prefetch 
-		remove_action( 'wp_head', 'wp_resource_hints', 2 );
+	// Remove Emojis
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
 
-		// Wordpress version
-		remove_action('wp_head', 'wp_generator');
+	// Remove DNS prefetch 
+	remove_action( 'wp_head', 'wp_resource_hints', 2 );
 
-		// Remove RSD link
-		remove_action('wp_head', 'rsd_link');
+	// Wordpress version
+	remove_action( 'wp_head', 'wp_generator' );
 
-		//Remove wlwmanifest Link
-		remove_action('wp_head', 'wlwmanifest_link');
-	}
+	// Remove RSD link
+	remove_action( 'wp_head', 'rsd_link' );
 
-	add_action('init', 'dl_disable_embeds_init');
-?>
+	//Remove wlwmanifest Link
+	remove_action( 'wp_head', 'wlwmanifest_link' );
+
+}
+
+add_action( 'init', 'dl_disable_embeds_init' );
