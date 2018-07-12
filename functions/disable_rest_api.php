@@ -6,6 +6,7 @@
  *
  * @return void
  * @since  1.0.4
+ * @see    https://developer.wordpress.org/reference/hooks/rest_authentication_errors/
  */
 function dl_disable_rest_api_access( $access ) {
 
@@ -22,10 +23,6 @@ function dl_disable_rest_api_access( $access ) {
 	return $access;
 }
 
-function dl_check_if_has_authentication() {
-	add_filter( 'rest_authentication_errors', 'dl_disable_rest_api_access' );
-}
-
 if ( version_compare( $GLOBALS['wp_version'], '4.7', '>=' ) ) {
-	dl_check_if_has_authentication();
+	// add_filter( 'rest_authentication_errors', 'dl_disable_rest_api_access' );
 }
