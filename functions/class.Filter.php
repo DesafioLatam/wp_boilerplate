@@ -10,6 +10,7 @@
 class Filter {
 	/**
 	 * Element to filter
+	 * @access private
 	 */
 	private $threshold;
 

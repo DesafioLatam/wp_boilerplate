@@ -6,6 +6,7 @@
  *
  * @return echo HTML
  * @since  1.0
+ * @uses   default disabled
  */
 function dl_custom_search_form() {
 

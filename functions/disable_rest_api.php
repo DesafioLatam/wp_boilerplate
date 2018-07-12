@@ -6,6 +6,7 @@
  *
  * @return void
  * @since  1.0.4
+ * @uses   default disabled
  * @see    https://developer.wordpress.org/reference/hooks/rest_authentication_errors/
  */
 function dl_disable_rest_api_access( $access ) {

@@ -7,6 +7,7 @@
  * @return  void
  * @since   1.1.2
  * @version 1.1
+ * @uses    default disabled
  * @see     https://codex.wordpress.org/Global_Variables 
  * @see     https://codex.wordpress.org/Function_Reference/show_admin_bar
  */
