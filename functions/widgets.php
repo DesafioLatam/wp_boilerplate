@@ -12,7 +12,7 @@ function dl_widget_init() {
 
 	register_sidebar( array(
 		'name'			=> 'Página de Contacto',
-		'id'			=> 'contact_widget',
+		'id'			=> 'contact-widget',
 		'before_widget'	=> '',
 		'after_widget'	=> '',
 		'before_title'	=> '',
@@ -20,7 +20,7 @@ function dl_widget_init() {
 	));
 	register_sidebar( array(
 		'name'			=> 'Barra Lateral',
-		'id'			=> 'sidebar_widget',
+		'id'			=> 'sidebar-widget',
 		'before_widget'	=> '',
 		'after_widget'	=> '',
 		'before_title'	=> '',
