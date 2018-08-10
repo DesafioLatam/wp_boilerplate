@@ -33,7 +33,10 @@ function dl_enqueue_style() {
 		wp_enqueue_style( 'flickity' );
 	}
 
-	wp_enqueue_style( 'fontawesome' );
+	if ( $theme_options['fontawesome'] ) {
+		wp_enqueue_style( 'fontawesome' );
+	}
+
 	wp_enqueue_style( 'main_style' );
 
 }
