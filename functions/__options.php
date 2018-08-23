@@ -5,7 +5,7 @@
  * Sets all theme options
  *
  * @since   1.4.3
- * @version 1.1.1
+ * @version 1.1.2
  */
 $theme_options = array(
 	'wp_min_version'		=> '4.8',
@@ -19,5 +19,9 @@ $theme_options = array(
 		'flexslider'		=> true,
 	),
 	'jQuery'				=> true,
-	'fontawesome'			=> true
+	'fontawesome'			=> true,
+	'menu'					=> array(
+		'button_home'		=> true,
+		'button_name'		=> 'Home'
+	)
 );
