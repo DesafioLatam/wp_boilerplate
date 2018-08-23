@@ -4,8 +4,6 @@
  * Custom Images Names
  * Adds custom images sizes ready to use on administrator
  *
- * @param  
- *
  * @return array
  * @since  1.0
  */
