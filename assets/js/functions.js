@@ -1,5 +1,5 @@
-jQuery(document).ready( function($) {
+(function($) {
 
 	// Functions
 
-});
+})(window.jQuery);
