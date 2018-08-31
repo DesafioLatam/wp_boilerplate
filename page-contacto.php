@@ -4,8 +4,8 @@
 	<?php the_title() ?>
 	<?php the_content(); ?>
 	
-	<?php if ( is_active_sidebar( 'contact_widget' ) ) : ?>
-		<?php dynamic_sidebar( 'contact_widget' ); ?>            
-	<?php endif; ?>
+	<?php if ( is_active_sidebar( 'contact-widget' ) ) { ?>
+		<?php dynamic_sidebar( 'contact-widget' ); ?>
+	<?php }; ?>
 
 <?php get_footer() ?>
