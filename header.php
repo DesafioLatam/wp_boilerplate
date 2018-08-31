@@ -10,5 +10,5 @@
 <body>
 
 <?php if ( has_nav_menu( 'header-menu' ) ) { ?>
-	<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container_class' => 'header_menu' ) ); ?>
+	<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container_class' => 'header-menu' ) ); ?>
 <?php } ?>
