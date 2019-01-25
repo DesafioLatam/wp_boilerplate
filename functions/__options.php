@@ -5,10 +5,10 @@
  * Sets all theme options
  *
  * @since   1.4.3
- * @version 1.1.2
+ * @version 1.1.3
  */
 $theme_options = array(
-	'wp_min_version'		=> '4.8',
+	'wp_min_version'		=> '5.0.3',
 	'woocommerce'			=> class_exists( 'WooCommerce' ),
 	'functions'				=> array(
 		'theme'				=> glob( get_template_directory() . '/functions/*.php' ),
