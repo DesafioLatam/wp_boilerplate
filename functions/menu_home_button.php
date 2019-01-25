@@ -7,7 +7,7 @@
  *
  * @return string
  * @since  1.5
- * @version 1.0
+ * @version 1.1
  */
 
 global $theme_options;
@@ -18,7 +18,14 @@ function dl_adds_menu_home_button( $items, $args ) {
 
 	if ( $args->theme_location == 'header-menu' || $args->theme_location == 'footer-menu' ) {
 
-		$home  = '<li class="menu-item">';
+		$li_class = '';
+		$li_data = '';
+
+		if (is_home() || is_front_page()) {
+			$li_class = 'current-menu-item';
+		}
+
+		$home  = '<li class="menu-item '. $li_class .'">';
 		$home .= '<a href="' . esc_url( get_home_url( '/' ) ) . '" title="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'">';
 		$home .= $theme_options['menu']['button_name'] ? $theme_options['menu']['button_name'] : 'Home';
 		$home .= '</a></li>';
