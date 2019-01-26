@@ -5,7 +5,7 @@
  * Sets all theme options
  *
  * @since   1.4.3
- * @version 1.1.3
+ * @version 1.1.4
  */
 $theme_options = array(
 	'wp_min_version'		=> '5.0.3',
@@ -21,7 +21,13 @@ $theme_options = array(
 	'jQuery'				=> true,
 	'fontawesome'			=> true,
 	'menu'					=> array(
-		'button_home'		=> true,
+		'button_home'		=> false,
 		'button_name'		=> 'Home'
+	),
+	'bootstrap'				=> array(
+		'version_3'			=> false,
+		'version_3_navbar'	=> false,
+		'version_4'			=> false,
+		'version_4_navbar'	=> false
 	)
 );
