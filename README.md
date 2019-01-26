@@ -38,3 +38,6 @@ En la versión 1.3.0 se ha agregado [Flickity](https://github.com/metafizzy/flic
 
 ### Archivo de opciones
 En la versión 1.4.3 se creó la variable `$theme_options` que contendrá todas las configuraciones necesarias para el theme. Dentro de los parámetros que contiene se encuentran opciones para saber si WooCommerce esta activo, obtener accesos a las carpetas de funciones y el key slider contiene dos nuevos parámetros. Estos permiten a través de un valor booleano activar o desactivar cada uno de los sliders disponibles en la plantilla.
+
+### Bootstrap 3 & 4
+En la versión 1.6.0 se agregó soporte para las versiones 3.4.0 & 4.2.1 de Bootstrap. Si bien por defecto no viene activado, se puede cambiar en el archivo de opciones `functions/__options.php`. Por otro lado, junto con agregar el mencionado framework, se agregó también soporte para el menú de navegación. Para cambiar los estilos del navbar es solo cosa de modificar y utilizar el template part correspondiente a la versión activada y que se encuentran en la carpeta de includes.
