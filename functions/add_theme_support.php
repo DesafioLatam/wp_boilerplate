@@ -6,10 +6,11 @@
  *
  * @return  void
  * @since   1.0
- * @version 1.3
+ * @version 1.4
  * @see     https://codex.wordpress.org/Function_Reference/register_nav_menus
  * @see     https://developer.wordpress.org/reference/functions/add_theme_support/
  * @see     https://codex.wordpress.org/Plugin_API/Action_Reference/after_setup_theme
+ * @see     https://wordpress.org/gutenberg/handbook/designers-developers/developers/themes/theme-support/
  */
 function dl_theme_setup() {
 
@@ -18,9 +19,15 @@ function dl_theme_setup() {
 	add_theme_support( 'customize-selective-refresh-widgets' );
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'customize-selective-refresh-widgets' );
+	
+	/* Gutenberg Support */
 	add_theme_support( 'wp-block-styles' );
 	add_theme_support( 'align-wide' );
 	add_theme_support( 'responsive-embeds' );
+	add_theme_support( 'editor-styles' );
+	add_theme_support( 'dark-editor-style' );
+	// add_theme_support('disable-custom-font-sizes');
+	// add_theme_support( 'disable-custom-colors' );
 
 	/* Woocommerce */
 	add_theme_support( 'woocommerce' );
@@ -58,7 +65,6 @@ function dl_theme_setup() {
 			'color' => '#fff',
 		)
 	) );
-
 
 	register_nav_menus(
 		array(
