@@ -19,7 +19,7 @@ function dl_custom_search_form() {
 	$form .= 	'</form>';
 	$form .= '</div>';
 
-	echo $form;
+	return $form;
 
 }
 
