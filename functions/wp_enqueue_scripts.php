@@ -35,11 +35,11 @@ function dl_enqueue_scripts() {
 
 	/* Register Scripts */
 	if ( $theme_options['bootstrap']['version_3'] ) {
-		wp_register_script( 'bootstrap', get_theme_file_uri('/assets/js/lib/bootstrap.3.4.0.js'), array('jquery-migrate'), null, true );
+		wp_register_script( 'bootstrap', get_theme_file_uri('/assets/js/lib/bootstrap.3.4.1.js'), array('jquery-migrate'), null, true );
 		array_push($deps, 'bootstrap');
 		
 	} else if ( $theme_options['bootstrap']['version_4'] ) {
-		wp_register_script( 'bootstrap', get_theme_file_uri('/assets/js/lib/bootstrap.bundle.4.2.1.js'), array('jquery-migrate'), null, true );
+		wp_register_script( 'bootstrap', get_theme_file_uri('/assets/js/lib/bootstrap.bundle.4.3.1.js'), array('jquery-migrate'), null, true );
 		array_push($deps, 'bootstrap');
 	}
 
