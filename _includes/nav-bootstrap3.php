@@ -12,16 +12,20 @@
 				<?php bloginfo('name'); ?>
 			</a>
 		</div>
+		<div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
 		<?php if ( has_nav_menu( 'header-menu' ) ) { ?>
 			<?php wp_nav_menu( array( 
 				'theme_location' 	=> 'header-menu',
 				'depth'				=> 2,
-				'container'			=> 'div',
-				'container_class'	=> 'navbar-collapse collapse',
+				'container'			=> false,
 				'menu_class'		=> 'nav navbar-nav',
 				'fallback_cb'		=> 'wp_bootstrap_navwalker::fallback',
 				'walker'			=> new wp_bootstrap_navwalker()
 			) ); ?>
 		<?php } ?>
+		<?php if ( is_active_sidebar( 'menu-widget' ) ) { ?>
+			<?php dynamic_sidebar( 'menu-widget' ); ?>
+		<?php }; ?>
+		</div>
 	</div>
 </nav>
