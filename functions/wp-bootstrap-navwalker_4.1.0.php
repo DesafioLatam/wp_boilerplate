@@ -20,7 +20,7 @@
 */
 
 /* Check if Class Exists. */
-if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) && $theme_options['bootstrap']['version_4_navbar'] ) {
+if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) && $theme_options['bootstrap']['version_4'] ) {
 	/**
 	 * WP_Bootstrap_Navwalker class.
 	 *

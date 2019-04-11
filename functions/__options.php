@@ -26,8 +26,6 @@ $theme_options = array(
 	),
 	'bootstrap'				=> array(
 		'version_3'			=> false,
-		'version_3_navbar'	=> false,
-		'version_4'			=> false,
-		'version_4_navbar'	=> false
+		'version_4'			=> false
 	)
 );
