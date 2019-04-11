@@ -15,6 +15,7 @@ if ( ! function_exists( 'get_pagination' ) ) {
 
 	function get_pagination( $custom_query = false ) {
 		global $wp_query;
+		global $theme_options;
 		// Get your options
 		$options         = get_option( DLP_ST );
 		$text_first_page = ! empty ( $options['first_text'] ) ? $options['first_text'] : '';
@@ -34,6 +35,8 @@ if ( ! function_exists( 'get_pagination' ) ) {
 
 		$current_page = get_query_var( 'paged' );
 
+		$bootstrap_enabled = $theme_options['bootstrap']['version_3'] || $theme_options['bootstrap']['version_4'];
+
 		if ( ! $custom_query )
 			$custom_query = $wp_query;
 
@@ -50,16 +53,36 @@ if ( ! function_exists( 'get_pagination' ) ) {
 			'after_page_number'  => $after_page_number
 		) );
 
-		if ( $paginations ) {
-			$return = '';
-			$return .= '<div class="pagination align-' . $align . $style . '"><ul class="page-nav">';
-			if ( $current_page > 1 && ! empty( $text_first_page ) )
+		if ( $paginations && $bootstrap_enabled ) {
+			$return = '<nav class="text-' . $align . $style . '" aria-label="Page navigation"><ul class="pagination">';
+
+			foreach ( $paginations as $nav => $page_link ) {
+				$current_nav = str_replace ( 'page-numbers', 'page-link', $page_link );
+				$class = ( strpos( $page_link, 'current' ) !== false ) ? ' active' : '';
+				$bootstrap_4_class = $theme_options['bootstrap']['version_4'] ? 'page-item ' : '';
+
+				$return .= '<li class="' . $bootstrap_4_class . $class . '">' . $current_nav . '</li>';
+			}
+
+			$return .= '</ul></div>';
+			return $return;
+
+		} elseif ( $paginations ) {
+			$return = '<div class="dl-pagination align-' . $align . $style . '"><ul class="page-nav">';
+
+			if ( $current_page > 1 && ! empty( $text_first_page ) ) {
 				$return .= '<li class="first-page"><a class="page-numbers first-page-link" href="' . esc_url( get_pagenum_link( 1 ) ) . '">' . $text_first_page . '</a></li>';
+			}
+
 			foreach ( $paginations as $nav ) {
 				$return .= '<li>' . $nav . '</li>';
 			}
-			if ( $current_page != $custom_query->max_num_pages && ! empty( $text_last_page ) )
-				$return .= '<li class="last-page"><a class="page-numbers last-page-link" href="' . esc_url( get_pagenum_link( $custom_query->max_num_pages ) ) . '">' . $text_last_page . '</a></li>';
+
+			if ( $current_page != $custom_query->max_num_pages && ! empty( $text_last_page ) ) {
+				$link = esc_url( get_pagenum_link( $custom_query->max_num_pages ) );
+				$return .= '<li class="last-page"><a class="page-numbers last-page-link" href="' . $link . '">' . $text_last_page . '</a></li>';
+			}
+
 			$return .= '</ul></div>';
 
 			return $return;

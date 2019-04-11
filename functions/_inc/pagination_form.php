@@ -1,3 +1,4 @@
+<?php global $theme_options; ?>
 <div class="wrap">
 	<h2><?php _e( 'Opciones de Paginación', 'dl-page-navigation' ); ?></h2>
 	<!-- Plugin Options Form -->
@@ -13,6 +14,7 @@
 		<div class="pag-tabs-content">
 			<!-- Plugin Text Options -->
 			<div class="general-options">
+				<?php if (!$theme_options['bootstrap']['version_3'] && !$theme_options['bootstrap']['version_4']) { ?>
 				<div class="pag-settings-field">
 					<div class="pag-settings-label">
 						<label><?php _e( 'Texto a Primera Página:', DLP ); ?></label>
@@ -29,6 +31,7 @@
 						<input type="text" class="regular-text" name="<?php echo DLP_ST; ?>[last_text]" value="<?php echo esc_attr( $options['last_text'] ); ?>" />
 					</div>
 				</div>
+				<?php } ?>
 				<div class="pag-settings-field">
 					<div class="pag-settings-label">
 						<label><?php _e( 'Texto a Página Previa:', DLP ); ?></label>
@@ -54,6 +57,7 @@
 				 */
 				$DLP_style = isset( $options['style'] ) ? $options['style'] : 'default';
 				?>
+				<?php if (!$theme_options['bootstrap']['version_3'] && !$theme_options['bootstrap']['version_4']) { ?>
 				<div class="pag-settings-field">
 					<div class="pag-settings-label">
 						<label><?php _e( 'Elige un estilo:', DLP ); ?></label>
@@ -67,6 +71,7 @@
 						</select>
 					</div>
 				</div>
+				<?php } ?>
 				<div class="pag-settings-field">
 					<div class="pag-settings-label">
 						<label><?php _e( 'Alineación de la Navegación:', DLP ); ?></label>
