@@ -42,4 +42,4 @@ function dl_login_logo_url_title() {
 	return get_bloginfo( 'name' );
 }
 
-add_filter( 'login_headertitle', 'dl_login_logo_url_title' );
+add_filter( 'login_headertext', 'dl_login_logo_url_title' );
