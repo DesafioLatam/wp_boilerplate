@@ -1,22 +1,19 @@
 /*!
+ *
  * Main Style
- * @version 1.7.0
- * @Since 1.0 
+ *
  * @author Cristobal Domínguez
  * @author Academia Desafío Latam
+ *
+ * @version 1.7.0
+ * @Since 1.0 
+ *
  */
 
-@import "lib/variables.scss";
-@import "lib/mixins.scss";
-
-//@import "lib/reset.scss";
-@import "lib/svg.scss";
-@import "lib/common.scss";
-@import "lib/color.scss";
-@import "lib/retina.scss";
-@import "lib/pagination.scss";
-@import "lib/screen-lg.scss";
-@import "lib/screen-md.scss";
-@import "lib/screen-sm.scss";
-@import "lib/screen-xs.scss";
-@import "lib/screen-xxs.scss";
+@import 'abstracts/index';
+@import 'vendors/index';
+@import 'base/index';
+@import 'themes/index';
+@import 'layout/index';
+@import 'components/index';
+@import 'pages/index';

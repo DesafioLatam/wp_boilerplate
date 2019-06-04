@@ -1,4 +1,4 @@
-@import "lib/variables.scss";
+@import "./abstracts/variables.scss";
 
 body.login {
 	background: linear-gradient(to bottom, darken($green, 15%) 0%,$green 100%);
