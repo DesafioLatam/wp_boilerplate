@@ -8,7 +8,7 @@
  * @version 1.1.4
  */
 $theme_options = array(
-	'wp_min_version'		=> '5.0.3',
+	'wp_min_version'		=> '5.2.0',
 	'woocommerce'			=> class_exists( 'WooCommerce' ),
 	'functions'				=> array(
 		'theme'				=> glob( get_template_directory() . '/functions/*.php' ),
