@@ -29,11 +29,11 @@ function dl_enqueue_style() {
 		$deps = array('bootstrap');
 	}
 
-	wp_register_style( 'reset', get_theme_file_uri( '/assets/css/reset.css'), null, $theme_data->get( 'Version' ), 'screen' );
-	wp_register_style( 'flexslider', get_theme_file_uri( '/assets/css/flexslider.css'), null, '2.7.1', 'screen' );
-	wp_register_style( 'flickity', get_theme_file_uri( '/assets/css/flickity.css'), null, '2.1.0', 'screen' );
-	wp_register_style( 'fontawesome', get_theme_file_uri( '/assets/css/fontawesome.css'), null, '5.6.3', 'screen' );
-	wp_register_style( 'main_style', get_theme_file_uri( '/assets/css/style.css'), $deps, $theme_data->get( 'Version' ), 'screen' );
+	wp_register_style( 'reset', get_theme_file_uri('/assets/css/reset.css'), null, $theme_data->get('Version'), 'screen' );
+	wp_register_style( 'flexslider', get_theme_file_uri('/assets/css/flexslider.css'), null, '2.7.1', 'screen' );
+	wp_register_style( 'flickity', get_theme_file_uri('/assets/css/flickity.css'), null, '2.1.0', 'screen' );
+	wp_register_style( 'fontawesome', get_theme_file_uri('/assets/css/fontawesome.css'), null, '5.6.3', 'screen' );
+	wp_register_style( 'main_style', get_theme_file_uri('/assets/css/style.css'), $deps, $theme_data->get('Version'), 'screen' );
 
 
 	/* Enqueue Styles */
