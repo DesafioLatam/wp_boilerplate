@@ -11,7 +11,7 @@ module.exports = merge(common, {
     path: path.resolve(__dirname, '../assets/')
   },
   plugins: [
-    new MiniCssExtractPlugin({ filename: 'css/[name].css' }),
+    new MiniCssExtractPlugin({ filename: 'styles/[name].css' }),
     new webpack.ProgressPlugin()
   ],
   module: {
