@@ -1,0 +1,43 @@
+{
+  "name": "Webpack-HTML-Boilerplate",
+  "version": "1.0.0",
+  "description": "A boilerplate to build HTML pages with Webpack",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --config webpack.dev.js --watch",
+    "build": "webpack --config webpack.pro.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cristobaldominguez/Webpack-HTML-Boilerplate.git"
+  },
+  "keywords": [
+    "Boilerplate",
+    "HTML",
+    "Webpack",
+    "SCSS"
+  ],
+  "author": {
+    "name": "Cristobal Dominguez",
+    "email": "cristobald@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cristobaldominguez/Webpack-HTML-Boilerplate"
+  },
+  "homepage": "https://github.com/cristobaldominguez/Webpack-HTML-Boilerplate#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.2.0",
+    "terser-webpack-plugin": "^1.4.1",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.6",
+    "webpack-merge": "^4.2.1"
+  }
+}
