@@ -21,19 +21,19 @@ function dl_enqueue_style() {
 
 	/* Register Styles */
 	if ( $theme_options['bootstrap']['version_3'] ) {
-		wp_register_style( 'bootstrap', get_theme_file_uri( '/assets/css/bootstrap.3.4.1.css'), null, null, 'screen' );
+		wp_register_style( 'bootstrap', get_theme_file_uri( '/assets/styles/bootstrap.3.4.1.css'), null, null, 'screen' );
 		$deps = array('bootstrap');
 
 	} else if ( $theme_options['bootstrap']['version_4'] ) {
-		wp_register_style( 'bootstrap', get_theme_file_uri( '/assets/css/bootstrap.4.3.1.css'), null, null, 'screen' );
+		wp_register_style( 'bootstrap', get_theme_file_uri( '/assets/styles/bootstrap.4.3.1.css'), null, null, 'screen' );
 		$deps = array('bootstrap');
 	}
 
-	wp_register_style( 'reset', get_theme_file_uri('/assets/css/reset.css'), null, $theme_data->get('Version'), 'screen' );
-	wp_register_style( 'flexslider', get_theme_file_uri('/assets/css/flexslider.css'), null, '2.7.1', 'screen' );
-	wp_register_style( 'flickity', get_theme_file_uri('/assets/css/flickity.css'), null, '2.1.0', 'screen' );
-	wp_register_style( 'fontawesome', get_theme_file_uri('/assets/css/fontawesome.css'), null, '5.6.3', 'screen' );
-	wp_register_style( 'main_style', get_theme_file_uri('/assets/css/style.css'), $deps, $theme_data->get('Version'), 'screen' );
+	wp_register_style( 'reset', get_theme_file_uri('/assets/styles/reset.css'), null, $theme_data->get('Version'), 'screen' );
+	wp_register_style( 'flexslider', get_theme_file_uri('/assets/styles/flexslider.css'), null, '2.7.1', 'screen' );
+	wp_register_style( 'flickity', get_theme_file_uri('/assets/styles/flickity.css'), null, '2.1.0', 'screen' );
+	wp_register_style( 'fontawesome', get_theme_file_uri('/assets/styles/fontawesome.css'), null, '5.6.3', 'screen' );
+	wp_register_style( 'main_style', get_theme_file_uri('/assets/styles/style.css'), $deps, $theme_data->get('Version'), 'screen' );
 
 
 	/* Enqueue Styles */
