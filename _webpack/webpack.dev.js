@@ -3,6 +3,8 @@ const webpack = require('webpack')
 const merge = require('webpack-merge')
 const common = require('./webpack.common')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const autoprefixer = require('autoprefixer')
+
 
 module.exports = merge(common, {
   mode: 'development',
@@ -11,8 +13,15 @@ module.exports = merge(common, {
     path: path.resolve(__dirname, '../assets/')
   },
   plugins: [
+    new webpack.ProgressPlugin(),
     new MiniCssExtractPlugin({ filename: 'styles/[name].css' }),
-    new webpack.ProgressPlugin()
+    new webpack.LoaderOptionsPlugin({
+      options: {
+          postcss: [
+              autoprefixer()
+          ]
+      }
+    })
   ],
   module: {
     rules: [
@@ -22,6 +31,14 @@ module.exports = merge(common, {
           MiniCssExtractPlugin.loader,
           'css-loader',
           'sass-loader'
+          {
+            loader: 'postcss-loader',
+            options: {
+              config: { 
+                path: './postcss.config.js' 
+              } 
+            }
+          },
         ]
       }
     ]
